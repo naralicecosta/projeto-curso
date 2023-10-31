@@ -17,7 +17,7 @@ function App() {
     const currentYear = new Date().getUTCFullYear();
     setResultado({
       nome: nome,
-      idade: currentYear - Number(ano)
+      idade: currentYear - Number(ano) //operação de ano atual (currentYear) - o ano que nasceu
     });
 
     setNome("")
@@ -35,7 +35,7 @@ function App() {
           className="input"
           placeholder="Digite seu nome..."
           value={nome}
-          onChange={ (e) => setNome(e.target.value) }
+          onChange={ (e) => setNome(e.target.value) } //vai pegar o nome
         />
 
         <label className="label">Digite o ano que nasceu?</label>
@@ -43,7 +43,7 @@ function App() {
           className="input"
           placeholder="Digite seu nome..."
           value={ano}
-          onChange={ (e) => setAno(e.target.value) }
+          onChange={ (e) => setAno(e.target.value) } //pega o ano que digitou
         />
 
         <button type="submit" onClick={descobrirIdade}>
